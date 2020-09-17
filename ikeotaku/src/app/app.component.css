@@ -1,0 +1,134 @@
+.barra_de_busqueda {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 40px;
+  background-color: #ebedf1;
+  border-radius: 30px;
+  padding: 3px;
+}
+
+.entrada_de_busqueda {
+  color: rgb(20, 19, 19);
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+}
+
+.barra_de_busqueda:hover>.entrada_de_busqueda {
+  text-align: start;
+  padding: 0px 10px 60px;
+  width: 500px;
+  caret-color: rgb(29, 31, 29);
+  transition: width 0.4s linear;
+}
+
+.barra_de_busqueda:hover>.icono_de_busqueda {
+  background: white;
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+.icono_de_busqueda {
+  height: 30px;
+  width: 30px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: rgb(52, 150, 196);
+  text-decoration: none;
+}
+
+.barra {
+  background: #bdc3c7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.personal {
+  margin-top: 10px;
+  background: #bdc3c7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+
+.letra:hover {
+  background: rgb(139, 134, 134);
+  text-decoration: none;
+}
+
+
+
+.titulo_novedades {
+  margin-bottom: 0px;
+  margin-left: 350px;
+  width: 400px;
+
+  background: #757F9A;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D7DDE8, #757F9A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/*fin de barra de navegacion*/
+
+.copyrights {
+  margin-top: 25px;
+}
+
+footer.container-fluid.text-center.foot {
+  color: silver;
+  background: #bdc3c7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.dark-line {
+  border-top: 1px solid #525252;
+}
+
+.white-txt {
+  color: #FFF;
+}
+
+
+a.link {
+  color: #191a1b;
+  border: 1px #111213 solid;
+  padding: 5px;
+  text-decoration: none;
+}
+
+a.link:hover {
+  background: #008acc;
+  color: #383838;
+}
+
+.footimg {
+  width: 5rem;
+}
+
+footer>div>p>img {
+  margin-top: 5px;
+}

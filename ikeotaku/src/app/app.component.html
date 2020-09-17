@@ -1,0 +1,103 @@
+<div class="container-fluid ">
+  <div class="row">
+    <header class="col-md-12  mt-2">
+      <!--Barra de navegacion-->
+      <nav class=" barra navbar navbar-expand-lg navbar-dark bg-dark pl-5 border">
+        <a class="navbar-brand ml-5 pl-5" href="#" [routerLink]="['/']">IKEOTAKU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link ml-4" href="#" [routerLink]="['/home']">Inicio <span
+                  class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle ml-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" [routerLink]="['/almacen-otaku']">
+                Almacen Otaku
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" [routerLink]="['/almacen-otaku','animes']">Anime</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" [routerLink]="['/almacen-otaku','mangas']">Manga</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link ml-4" href="#" [routerLink]="['/contacto']">Contacto <span
+                  class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ml-3 pl-3"><a href="https://discordapp.com/invite/vfkPrdT" target="_blank"
+                rel="nofollow"><img src="../assets/imagenes/tdiscord.png" width="48px" height="48px" /></a></li>
+            <li class="nav-item active ml-3 pl-3">
+              <a href="https://www.youtube.com/channel/UCFQfgxG3QeWCldjAkFJSYWg?sub_confirmation=1" target="_blank"
+                rel="nofollow"><img src="../assets/imagenes/tyoutube.png" width="48px" height="48px" /></a>
+            </li>
+            <li class="nav-item active ml-3 pl-3">
+              <a href="https://www.twitch.tv/padenia/" target="_blank" rel="nofollow"><img
+                  src="../assets/imagenes/ttwitch.png" width="48px" height="48px" /></a>
+            </li>
+            <!-- buscador y perfil personal-->
+          </ul>
+          <ul class="navbar-nav ml-auto nav-flex-icons pr-5 mr-5">
+            <li>
+              <div class="d-flex justify-content-center h-100 mr-4">
+                <div class="barra_de_busqueda">
+                  <input class="entrada_de_busqueda" type="text" name="" placeholder="Busqueda...">
+                  <a href="#" class="icono_de_busqueda"><i class="fas fa-search"></i></a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"> Otaku Privad</i>
+              </a>
+              <div class=" personal dropdown-menu dropdown-menu-right dropdown-default"
+                aria-labelledby="navbarDropdownMenuLink-333">
+                <a class="dropdown-item text-light letra " href="#" [routerLink]="['/registro']">Registro</a>
+                <a class="dropdown-item text-light letra" href="#" [routerLink]="['/perfil']">Perfil</a>
+                <a class="dropdown-item text-light letra" href="#">Salir</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+
+  <router-outlet></router-outlet>
+  <!--footer-->
+  <footer class="container-fluid text-center foot mb-n1">
+
+    <div class="copyrights">
+      <p class="white-txt"><img class="footimg " src="assets/imagenes/ikeotaku.png" alt="Logo"> todos los
+        derechos reservados © 2020
+
+
+      </p>
+      <hr class="dark-line">
+      <a class="link" href="#">Contactame</a>&nbsp;
+      <a class="link" href="#">Politica de privacidad</a>&nbsp;
+      <a class="link" href="#">Terminos & Condiciones</a>
+      <br><br>
+      <p class="white-txt small">
+        IKEOTAKU es una pagina de uso ludico para consultas sobre contenido otaku sin animo de lucro.
+      </p>
+    </div>
+  </footer>
+  <!-- -fin de footer -->
