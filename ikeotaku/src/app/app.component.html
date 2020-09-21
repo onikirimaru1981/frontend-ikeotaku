@@ -3,7 +3,7 @@
     <header class="col-md-12  mt-2">
       <!--Barra de navegacion-->
       <nav class=" barra navbar navbar-expand-lg navbar-dark bg-dark pl-5 border">
-        <a class="navbar-brand ml-5 pl-5" href="#" [routerLink]="['/']">IKEOTAKU</a>
+        <a class="navbar-brand ml-5 pl-5" [routerLink]="['/']">IKEOTAKU</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -11,13 +11,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link ml-4" href="#" [routerLink]="['/home']">Inicio <span
-                  class="sr-only">(current)</span></a>
+              <a class="nav-link ml-4" [routerLink]="['/home']">Inicio <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle ml-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" [routerLink]="['/almacen-otaku']">
+              <a class="nav-link dropdown-toggle ml-4" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Almacen Otaku
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -27,8 +26,7 @@
               </div>
             </li>
             <li class="nav-item active">
-              <a class="nav-link ml-4" href="#" [routerLink]="['/contacto']">Contacto <span
-                  class="sr-only">(current)</span></a>
+              <a class="nav-link ml-4" [routerLink]="['/contacto']">Contacto <span class="sr-only"></span></a>
             </li>
             <li class="nav-item active ml-3 pl-3"><a href="https://discordapp.com/invite/vfkPrdT" target="_blank"
                 rel="nofollow"><img src="../assets/imagenes/tdiscord.png" width="48px" height="48px" /></a></li>
@@ -52,25 +50,17 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link waves-effect waves-light">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
 
-            <li class="nav-item">
-              <a class="nav-link waves-effect waves-light">
-                <i class="fab fa-google-plus-g"></i>
-              </a>
-            </li>
             <li class="nav-item dropdown ">
               <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-user"> Otaku Privad</i>
               </a>
-              <div class=" personal dropdown-menu dropdown-menu-right dropdown-default"
+              <div class=" zonaPrivada personal dropdown-menu dropdown-menu-right dropdown-default"
                 aria-labelledby="navbarDropdownMenuLink-333">
-                <a class="dropdown-item text-light letra " href="#" [routerLink]="['/registro']">Registro</a>
-                <a class="dropdown-item text-light letra" href="#" [routerLink]="['/perfil']">Perfil</a>
+                <a class="dropdown-item text-light letra " [routerLink]="['/registro']">Registro</a>
+                <a class="dropdown-item text-light letra " [routerLink]="['/login']">Login</a>
+                <a class="dropdown-item text-light letra" [routerLink]="['/perfil']">Perfil</a>
                 <a class="dropdown-item text-light letra" href="#">Salir</a>
               </div>
             </li>

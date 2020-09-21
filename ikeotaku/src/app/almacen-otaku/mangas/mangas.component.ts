@@ -11,9 +11,11 @@ export class MangasComponent implements OnInit {
 
   constructor(private otakuService: OtakuService) { }
 
-  ngOnInit() {
-    this.arrayMangas = this.otakuService.get//tengo pendiente crear los metodos para mangas
+  async ngOnInit() {
+    this.arrayMangas = await this.otakuService.getAllMangas();
+    console.log(this.arrayMangas);
 
   }
 
 }
+// tengo pendiente crear los metodos para mangas

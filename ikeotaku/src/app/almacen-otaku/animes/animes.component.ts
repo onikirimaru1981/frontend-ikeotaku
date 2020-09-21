@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
 import { OtakuService } from 'src/app/services/otaku.service';
 
 @Component({

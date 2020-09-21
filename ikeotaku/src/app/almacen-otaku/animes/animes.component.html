@@ -3,56 +3,44 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<!-- Team -->
-<section id="team" class="pb-5">
-  <div class="container">
-    <h5 class="section-title h1">animes</h5>
-    <div class="row">
-      <!-- Team member -->
-      <div class="col-xs-12 col-sm-6 col-md-4" *ngFor='let anime of arrayAnimes'>
+<!-- animes -->
+
+<section id="team" class="pb-5  ">
+  <div class="container ">
+    <h5 class="section-title h1 ">Animes</h5>
+    <div class="row ">
+      <!-- card de animes -->
+      <div class="col-xs-12 col-sm-6 col-md-4  " *ngFor='let anime of arrayAnimes'>
         <div class="image-flip">
           <div class="mainflip flip-0">
             <div class="frontside">
               <div class="card">
                 <div class="card-body text-center">
-                  <p><img class=" img-fluid" [src]="anime.posterImage.tiny" alt="card image">
+                  <p><img class=" img-fluid" [src]="anime.posterImage.tiny" alt="card anime">
                   </p>
                   <h4 class="card-title">{{anime.titles.en}}</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                  <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i
-                      class="fa fa-plus"></i></a>
+                  <p class="card-text">Sinopsis:{{anime.synopsis}}</p>
+                  <p class="card-text text-danger">Señala la imagen para mas informacion</p>
+
                 </div>
               </div>
             </div>
+
             <div class="backside">
               <div class="card">
                 <div class="card-body text-center mt-4">
-                  <h4 class="card-title">Sunlimetech</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.This is basic
-                    card with image on top, title, description and button.This is basic card with image on top, title,
-                    description and button.</p>
-                  <ul class="list-inline">
-                    <li class="list-inline-item">
-                      <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                        <i class="fa fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                        <i class="fa fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                        <i class="fa fa-skype"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a class="social-icon text-xs-center" target="_blank" href="https://www.fiverr.com/share/qb8D02">
-                        <i class="fa fa-google"></i>
-                      </a>
-                    </li>
-                  </ul>
+                  <!--Preguntar a juanan para los enlaces  youtube ¡solucionado!-->
+                  <h4 class="card-title">Title:{{anime.titles.en}}/Title Japan:{{anime.titles.ja_jp}}</h4>
+
+                  <youtube-player videoId={{anime.youtubeVideoId}} suggestedQuality="highres" [height]="200"
+                    [width]="300" [startSeconds]="0" [endSeconds]="400">
+                  </youtube-player>
+                  <p class="text-info">Nº de episodios:{{anime.episodeCount}}</p>
+                  <p class="text-success">Duracion de epidosios:{{anime.episodeLength}}"</p>
+                  <p class="text-danger">Guia de clasificacion:{{anime.ageRatingGuide}}"</p>
+                  <!-- <p>Agregar a favoritos</p>
+                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+
                 </div>
               </div>
             </div>

@@ -1,11 +1,14 @@
 .barra_de_busqueda {
   margin-bottom: auto;
   margin-top: auto;
+
   height: 40px;
   background-color: #ebedf1;
   border-radius: 30px;
   padding: 3px;
 }
+
+
 
 .entrada_de_busqueda {
   color: rgb(20, 19, 19);
