@@ -35,7 +35,7 @@ export class RegistroComponent implements OnInit {
   async addUserBBDD(): Promise<any> {
     try {
       const userData = this.formUser.value;
-      console.log('FormsComponent -> addUserToBBDD -> userData', userData);
+
 
 
       const jsonCreateUser = this.otakuService.createUser(userData);

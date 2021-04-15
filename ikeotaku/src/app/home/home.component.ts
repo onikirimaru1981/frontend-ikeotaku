@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  logado: boolean;
+
+  constructor() {
+    this.logado = false;
+  }
 
   ngOnInit(): void {
+    const token = sessionStorage.getItem('token');
+    if (token !== null) {
+      this.logado = true;
+    } else {
+      this.logado = false;
+    }
   }
 
 }

@@ -14,11 +14,14 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private otakuService: OtakuService
+
   ) {
     this.formUser = new FormGroup({
       email: new FormControl(),
       password: new FormControl(),
+
     });
+
 
   }
 
@@ -28,25 +31,21 @@ export class LoginComponent implements OnInit {
   async userLogin(): Promise<any> {
     try {
       const userData = this.formUser.value;
-      // console.log('LoginUserComponent -> ngOnInit -> userData', userData);
+      console.log(userData);
       const dataUserLogin = await this.otakuService.userLogin(userData);
-      console.log(
-        'LoginUserComponent -> ngOnInit -> jsonUserLogin',
-        dataUserLogin
-      );
-
-      sessionStorage.setItem(
-        'user_email',
-        JSON.stringify(dataUserLogin.user_name)
-      );
+      sessionStorage.setItem('user_email', JSON.stringify(userData.email));
       sessionStorage.setItem('token', JSON.stringify(dataUserLogin.token));
-      sessionStorage.setItem('email', JSON.stringify(dataUserLogin.email));
-      sessionStorage.setItem('password', JSON.stringify(dataUserLogin.password));
-      this.router.navigate([`home/${dataUserLogin.email}`]);
+
+      this.router.navigate([`/home`]).then(() => {
+        window.location.reload();
+      });
+
     } catch (error) {
-      console.log(error);
+
     }
   }
+
+
 
 }
 
